@@ -30,9 +30,3 @@ const port = process.env.PORT || 8000
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 });
-
-
-// load env variables
-const dotenv = require('dotenv');
-dotenv.config()
- 
