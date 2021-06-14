@@ -24,9 +24,12 @@ mongoose.connection.on("error", (err) => {
 });
 
 // middleware
-app.use(morgan('dev'))
-app.use(bodyParser.json())
-app.use(cookieParser())
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(cookieParser());
 
 //routes middleware
 app.use("/api", userRoutes);
