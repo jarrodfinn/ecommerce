@@ -26,7 +26,7 @@ mongoose.connection.on("error", (err) => {
 // middleware
 app.use(morgan('dev'))
 app.use(bodyParser.json())
-app.use(cookie - parser());
+app.use(cookieParser())
 
 //routes middleware
 app.use("/api", userRoutes);
